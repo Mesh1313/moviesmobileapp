@@ -114,12 +114,10 @@ export const FilmCard = ({filmData, isInFavourites, onAddToFavourites, onRemoveF
                 </View>
             </View>
             <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-                <View>
+                {onWatchTrailer ?
                     <BlueButton
                         text={'Watch Trailer'}
-                        onPress={onWatchTrailer}
-                        btnStyles={{flex: 1}}/>
-                </View>
+                        onPress={onWatchTrailer}/> : null}
                 {isInFavourites ? 
                     <RedButton
                         text={'Remove From Favourites'}
